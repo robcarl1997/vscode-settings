@@ -1,0 +1,68 @@
+{
+    "editor.lineNumbers": "relative",
+    "editor.minimap.enabled": false,
+    "vim.leader": "<Space>",
+    // NAVIGATION
+    // switch b/w buffers
+    "vim.normalModeKeyBindingsNonRecursive": [
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Run python
+    { "before": ["leader", "r"], "commands": ["python.execInTerminal"],"when":"resourceLangId == 'python'" },
+    { "before": ["leader", "c"], "commands": ["C_Cpp.BuildAndRunFile"],"when":"resourceLangId == 'c' || resourceLangId == 'cpp'"},
+
+    // close active pane
+    { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"],
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"],
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"],
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"],
+    },
+    // NICE TO HAVE
+    { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
+],
+"vim.insertModeKeyBindings": [
+    {
+        "before": ["j", "k"],
+        "after": ["<esc>"]
+    }
+],
+"vim.visualModeKeyBindings":[
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.movelinesdownaction"] },
+    { "before": ["K"], "commands": ["editor.action.movelinesupaction"] },
+    ],
+    "workbench.iconTheme": "material-icon-theme",
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
+    "zenMode.hideLineNumbers": false,
+    "workbench.colorTheme": "Monokai",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "arduino.useArduinoCli": true,
+    "python.languageServer": "Jedi",
+    "settingsSync.ignoredExtensions": [
+      
+    ]
+}
