@@ -18,7 +18,9 @@
 
     // Run python
     { "before": ["leader", "r"], "commands": ["python.execInTerminal"] },
-    { "before": ["leader", "c"], "commands": ["workbench.action.tasks.runTask", "workbench.action.debug.start"] },
+
+    // Run C++ / C
+    { "before": ["leader", "c"], "commands": ["C_Cpp_Runner.buildSingleFile","C_Cpp_Runner.debugCurrentSelection"] },
 
     // close active pane
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
