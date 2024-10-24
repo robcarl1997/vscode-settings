@@ -52,6 +52,11 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   //
+  {
+    "key": "ctrl+c",  // or another keybinding of your choice
+    "command": "editor.action.clipboardCopyAction", 
+    "when": "editorTextFocus && vim.mode == 'Visual'",
+  },
   // EXTRA
   {
     "key": "ctrl+shift+5",

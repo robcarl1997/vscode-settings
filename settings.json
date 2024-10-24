@@ -1,20 +1,24 @@
 {
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
+    "breadcrumbs.enabled": false,
     "vim.leader": "<Space>",
     // NAVIGATION
     // switch b/w buffers
     "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-h>"], "commands": [":bprevious"] },
     { "before": ["<S-l>"], "commands": [":bnext"] },
+    { "before": ["d", "i", "c"], "after": ["d", "i", "["] },
+    { "before": ["c", "i", "c"], "after": ["c", "i", "["] },
+    { "before": ["v", "i", "c"], "after": ["v", "i", "["] },
 
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
 
     // Run python
-    { "before": ["leader", "r"], "commands": ["python.execInTerminal"],"when":"resourceLangId == 'python'" },
-    { "before": ["leader", "c"], "commands": ["C_Cpp.BuildAndRunFile"],"when":"resourceLangId == 'c' || resourceLangId == 'cpp'"},
+    { "before": ["leader", "r"], "commands": ["python.execInTerminal"] },
+    { "before": ["leader", "c"], "commands": ["workbench.action.tasks.runTask", "workbench.action.debug.start"] },
 
     // close active pane
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
@@ -52,17 +56,20 @@
     // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.movelinesdownaction"] },
     { "before": ["K"], "commands": ["editor.action.movelinesupaction"] },
+    {
+    "before": ["S", "\""],
+    "commands": [
+      "editor.action.insertSnippet",
+        {
+        "snippet": "\"${TM_SELECTED_TEXT}\""
+        }
+      ]
+    },
     ],
     "workbench.iconTheme": "material-icon-theme",
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
     "workbench.colorTheme": "Monokai",
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "arduino.useArduinoCli": true,
-    "python.languageServer": "Jedi",
-    "settingsSync.ignoredExtensions": [
-      
-    ]
+    "diffEditor.hideUnchangedRegions.enabled": true
 }
