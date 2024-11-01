@@ -8,9 +8,17 @@
     "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-h>"], "commands": [":bprevious"] },
     { "before": ["<S-l>"], "commands": [":bnext"] },
-    { "before": ["d", "i", "c"], "after": ["d", "i", "["] },
-    { "before": ["c", "i", "c"], "after": ["c", "i", "["] },
-    { "before": ["v", "i", "c"], "after": ["v", "i", "["] },
+
+    // []
+    { "before": ["y", "i", "e"], "after": ["y", "i", "["] },
+    { "before": ["d", "i", "e"], "after": ["d", "i", "["] },
+    { "before": ["c", "i", "e"], "after": ["c", "i", "["] },
+    { "before": ["v", "i", "e"], "after": ["v", "i", "["] },
+    // {}
+    { "before": ["y", "i", "c"], "after": ["y", "i", "B"] },
+    { "before": ["d", "i", "c"], "after": ["d", "i", "B"] },
+    { "before": ["c", "i", "c"], "after": ["c", "i", "B"] },
+    { "before": ["v", "i", "c"], "after": ["v", "i", "B"] },
 
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
