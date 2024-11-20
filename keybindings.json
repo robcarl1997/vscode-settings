@@ -148,4 +148,19 @@
       "command": "-workbench.action.terminal.toggleTerminal",
       "when": "terminal.active"
     },
+    {
+      "key": "ctrl+shift+v",
+      "command": "markdown.showPreviewToSide",
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+k v",
+      "command": "-markdown.showPreviewToSide",
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
+    {
+      "key": "ctrl+shift+v",
+      "command": "-markdown.showPreview",
+      "when": "!notebookEditorFocused && editorLangId == 'markdown'"
+    },
 ]

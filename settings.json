@@ -1,4 +1,35 @@
 {
+    "editor.tokenColorCustomizations": {
+      "[*]": { 
+      "textMateRules": [
+      {
+        "scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+        "settings": {
+          "foreground": "#f82121"
+        }
+      },
+      {
+        "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
+        "settings": {
+          "foreground": "#3eee38" // Grün für H2
+        }
+      },
+      {
+        "scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+        "settings": {
+          "foreground": "#1abaff" 
+        }
+      },
+      {
+        "scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+        "settings": {
+          "foreground": "#a99e00" // Blau für H3
+        }
+      }
+        ]
+      }
+    },
+    "markdown.styles": ["custom.css"],
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "breadcrumbs.enabled": false,
@@ -81,5 +112,8 @@
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
     "workbench.colorTheme": "Monokai",
-    "diffEditor.hideUnchangedRegions.enabled": true
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "python.createEnvironment.trigger": "off",
+    "notebook.lineNumbers": "on",
+    "security.workspace.trust.untrustedFiles": "open"
 }
