@@ -194,6 +194,20 @@
     "key": "ctrl+k",
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible && editorTextFocus"
+    },
+    // close window 
+    {
+    "key": "space+q",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus || markdownPreviewFocus"
+    },
+    {
+      "key": "ctrl+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "ctrl+shift+s",
+      "command": "-workbench.action.files.saveLocalFile",
+      "when": "remoteFileDialogVisible"
     }
-
 ]

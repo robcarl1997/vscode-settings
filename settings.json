@@ -115,5 +115,6 @@
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",
-    "security.workspace.trust.untrustedFiles": "open"
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.renderWhitespace": "all"
 }
