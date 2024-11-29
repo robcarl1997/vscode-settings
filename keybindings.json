@@ -17,7 +17,27 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+w",
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.terminal.resizePaneRight",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+h",
+    "command": "workbench.action.terminal.resizePaneLeft",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+w",
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
@@ -42,6 +62,21 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
+    "command": "filesExplorer.cut",
+    "key": "x",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.paste",
+    "key": "p",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "command": "filesExplorer.findInFolder",
+    "key": "/",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
     "key": "shift+n",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
@@ -58,6 +93,22 @@
     "when": "editorTextFocus && vim.mode == 'Visual'",
   },
   // EXTRA
+  {
+    "key": "ctrl+h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.focusBelowGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.focusAboveGroup"
+  },
+  {
+    "key": "ctrl+l",
+    "command": "workbench.action.focusRightGroup"
+  },
   {
     "key": "ctrl+shift+5",
     "command": "editor.emmet.action.matchTag"
@@ -204,5 +255,10 @@
     {
       "key": "ctrl+shift+s",
       "command": "workbench.action.toggleActivityBarVisibility",
+    },
+    {
+      "key": "ctrl+shift+c",
+      "command": "-workbench.action.terminal.openNativeConsole",
+      "when": "!terminalFocus"
     },
 ]

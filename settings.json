@@ -9,7 +9,7 @@
         }
       },
       {
-        "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuation.definition.heading.markdown",
+        "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuationf.definition.heading.markdown",
         "settings": {
           "foreground": "#3eee38" // Grün für H2
         }
@@ -65,22 +65,6 @@
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
 
     // panes
-    {
-      "before": ["leader", "h"],
-      "commands": ["workbench.action.focusLeftGroup"],
-    },
-    {
-      "before": ["leader", "j"],
-      "commands": ["workbench.action.focusBelowGroup"],
-    },
-    {
-      "before": ["leader", "k"],
-      "commands": ["workbench.action.focusAboveGroup"],
-    },
-    {
-      "before": ["leader", "l"],
-      "commands": ["workbench.action.focusRightGroup"],
-    },
     // NICE TO HAVE
     { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
 ],
@@ -111,11 +95,17 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "Monokai",
+    "workbench.colorTheme": "Alt Catppuccin Macchiato",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",
     "security.workspace.trust.untrustedFiles": "open",
-    "editor.renderWhitespace": "all",
-    "workbench.activityBar.location": "hidden"
+    "window.titleBarStyle": "custom",
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "auto",
+    "window.density.editorTabHeight": "compact",
+    "editor.scrollbar.horizontal": "hidden",
+    "editor.scrollbar.vertical": "hidden",
+    "workbench.activityBar.location": "hidden",
 }
