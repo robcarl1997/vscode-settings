@@ -163,4 +163,37 @@
       "command": "-markdown.showPreview",
       "when": "!notebookEditorFocused && editorLangId == 'markdown'"
     },
+    {
+    "key": "ctrl+shift+l",
+    "command": "workbench.action.increaseViewSize",
+    "when": "editorTextFocus && vim.active"
+    },
+    {
+      "key": "ctrl+shift+h",
+      "command": "workbench.action.decreaseViewSize",
+      "when": "editorTextFocus && vim.active"
+    },
+    // Listen
+    {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenNavigateNext",
+    "when": "inQuickOpen"
+    },
+    {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQuickOpen"
+    },
+    // Autocomplete
+    {
+    "key": "ctrl+j",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetVisible && editorTextFocus"
+    },
+    {
+    "key": "ctrl+k",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetVisible && editorTextFocus"
+    }
+
 ]
