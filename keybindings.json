@@ -202,12 +202,7 @@
     "when": "editorTextFocus || markdownPreviewFocus"
     },
     {
-      "key": "ctrl+b",
-      "command": "-workbench.action.toggleSidebarVisibility"
-    },
-    {
       "key": "ctrl+shift+s",
-      "command": "-workbench.action.files.saveLocalFile",
-      "when": "remoteFileDialogVisible"
-    }
+      "command": "workbench.action.toggleActivityBarVisibility",
+    },
 ]
