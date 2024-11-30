@@ -109,5 +109,4 @@
     "editor.scrollbar.vertical": "hidden",
     "zenMode.hideActivityBar": false,
     "zenMode.hideStatusBar": false,
-    "workbench.activityBar.location": "hidden",
 }

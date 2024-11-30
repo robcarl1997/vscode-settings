@@ -1,6 +1,6 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [  
-    // Terminal
+    //! Terminal
   {
     "key": "ctrl+shift+j",
     "command": "workbench.action.terminal.focusNext",
@@ -41,7 +41,7 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
-  // FILE TREE
+  //! FILE TREE
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
@@ -54,6 +54,11 @@
   {
     "key": "n",
     "command": "explorer.newFile",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "z",
+    "command": "workbench.files.action.collapseExplorerFolders",
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
@@ -76,21 +81,6 @@
     "key": "p",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  // {
-  //   "key": "ctrl+alt+f",
-  //   "command": "-list.find",
-  //   "when": "filesExplorerFocus"
-  // },
-    // {
-    // "command": "-list.find",
-    // "key": "ctrl+alt+f",
-    // "when": "filesExplorerFocus && !inputFocus"
-    // },
-  // {
-  //   "command": "-list.find",
-  //   "key": "/",
-  //   "when": "filesExplorerFocus && !inputFocus"
-  // },
   {
     "key": "shift+n",
     "command": "explorer.newFolder",
@@ -275,5 +265,15 @@
       "key": "ctrl+shift+c",
       "command": "-workbench.action.terminal.openNativeConsole",
       "when": "!terminalFocus"
+    },
+    {
+      "key": "ctrl+g f",
+      "command": "revealFileInOS",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+alt+r",
+      "command": "-revealFileInOS",
+      "when": "!editorFocus"
     },
 ]
