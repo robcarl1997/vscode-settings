@@ -97,6 +97,17 @@
     "command": "editor.action.clipboardCopyAction", 
     "when": "editorTextFocus && vim.mode == 'Visual'",
   },
+  //! Menu bar
+  // {
+  //     "key": "j",
+  //     "command": "keydown",
+  //     "when": "menuBarVisible"
+  // },
+  // {
+  //     "key": "k",
+  //     "command": "workbench.action.quickOpenNavigatePrevious",
+  //     "when": "menuBarVisible"
+  // },
   //! EXTRA
   {
     "key": "ctrl+h",

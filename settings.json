@@ -101,7 +101,8 @@
     "notebook.lineNumbers": "on",
     "security.workspace.trust.untrustedFiles": "open",
     "window.titleBarStyle": "custom",
-    "window.title": "(ツ)_/¯ ${activeEditorShort}",
+    "window.title": " ",
+    // "window.title": "(ツ)_/¯ ${activeEditorShort}",
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
     "window.customTitleBarVisibility": "auto",
@@ -111,5 +112,6 @@
     "zenMode.hideActivityBar": false,
     "zenMode.hideStatusBar": false,
     "window.menuBarVisibility": "toggle",
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+    "path-intellisense.absolutePathToWorkspace": false
 }
