@@ -97,7 +97,7 @@
     "command": "editor.action.clipboardCopyAction", 
     "when": "editorTextFocus && vim.mode == 'Visual'",
   },
-  // EXTRA
+  //! EXTRA
   {
     "key": "ctrl+h",
     "command": "workbench.action.focusLeftGroup"
