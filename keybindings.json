@@ -57,6 +57,11 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
+    "key": "y",
+    "command": "filesExplorer.copy",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
     "command": "renameFile",
     "key": "r",
     "when": "filesExplorerFocus && !inputFocus"
@@ -71,11 +76,21 @@
     "key": "p",
     "when": "filesExplorerFocus && !inputFocus"
   },
-  {
-    "command": "filesExplorer.findInFolder",
-    "key": "/",
-    "when": "filesExplorerFocus && !inputFocus"
-  },
+  // {
+  //   "key": "ctrl+alt+f",
+  //   "command": "-list.find",
+  //   "when": "filesExplorerFocus"
+  // },
+    // {
+    // "command": "-list.find",
+    // "key": "ctrl+alt+f",
+    // "when": "filesExplorerFocus && !inputFocus"
+    // },
+  // {
+  //   "command": "-list.find",
+  //   "key": "/",
+  //   "when": "filesExplorerFocus && !inputFocus"
+  // },
   {
     "key": "shift+n",
     "command": "explorer.newFolder",
