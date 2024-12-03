@@ -3,36 +3,107 @@
       "[*]": { 
       "textMateRules": [
       {
-        "scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+        "scope": "heading.1.markdown entity.name.section.markdown",
         "settings": {
           "foreground": "#f82121"
         }
       },
       {
-        "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuationf.definition.heading.markdown",
+        "scope": "heading.2.markdown entity.name.section.markdown",
         "settings": {
           "foreground": "#3eee38" // Grün für H2
         }
       },
       {
-        "scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+        "scope": "heading.3.markdown entity.name.section.markdown",
         "settings": {
           "foreground": "#1abaff" 
         }
       },
       {
-        "scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+        "scope": "heading.4.markdown entity.name.section.markdown",
         "settings": {
           "foreground": "#a99e00" // Blau für H3
         }
-      }
+      },
+      {
+        "scope": "punctuation.definition.bold.markdown", 
+        "settings": {
+          "foreground": "#383838" // Farbe für Sternchen
+        }
+      },
+      {
+				"scope": "markup.bold",
+				"settings": {
+					"fontStyle": "bold",
+					"foreground": "#be00e9"
+				}
+			},
+      // {
+      //   "scope": "markup.list.task.pending.markdown",
+      //   "settings": {
+      //     "foreground": "#0000FF", // Blau für offene Aufgaben ([ ])
+      //     "fontStyle": "italic"
+      //   }
+      // },
+      // {
+      //   "scope": "meta.embedded.block.markdown.task.checked",
+      //   "settings": {
+      //     "foreground": "#808080", // Grau für erledigte Aufgaben ([x])
+      //     "fontStyle": "strikethrough"
+      //   }
+      // },
+      // {
+      //   "scope": "markup".e,
+      //   "settings": {
+      //     "foreground": "#d61212", // Grau für erledigte Aufgaben ([x])
+      //     "fontStyle": "strikethrough"
+      //   }
+      // }
+      // {
+      //   "scope": "heading.1.markdown entity.name.section.markdown, heading.1.markdown punctuation.definition.heading.markdown",
+      //   "settings": {
+      //     "foreground": "#f82121"
+      //   }
+      // },
+      // {
+      //   "scope": "heading.2.markdown entity.name.section.markdown, heading.2.markdown punctuationf.definition.heading.markdown",
+      //   "settings": {
+      //     "foreground": "#3eee38" // Grün für H2
+      //   }
+      // },
+      // {
+      //   "scope": "heading.3.markdown entity.name.section.markdown, heading.3.markdown punctuation.definition.heading.markdown",
+      //   "settings": {
+      //     "foreground": "#1abaff" 
+      //   }
+      // },
+      // {
+      //   "scope": "heading.4.markdown entity.name.section.markdown, heading.4.markdown punctuation.definition.heading.markdown",
+      //   "settings": {
+      //     "foreground": "#a99e00" // Blau für H3
+      //   }
+      // },
         ]
       }
     },
+      "todo-tree.highlights.customHighlight": {
+        "- [ ]": {
+          "foreground": "#5d1900", // Orange für offene Aufgaben
+          "background": "#ff6a34", // Orange für offene Aufgaben
+          "icon": "circle",        // Symbol für offene Aufgaben
+          "iconColour": "#ff723e"
+        },
+        "- [x]": {
+          "foreground": "#808080", // Grau für erledigte Aufgaben
+          "icon": "check",         // Symbol für erledigte Aufgaben
+          "iconColour": "#4CAF50"  // Grün für das Symbol
+        }
+    },
+    "todo-tree.regex.regex": "((//|#|<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG)|- \\[ \\]|- \\[x\\])",
     "markdown.styles": ["custom.css"],
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
-    "breadcrumbs.enabled": false,
     "vim.leader": "<Space>",
     // NAVIGATION
     // switch b/w buffers
@@ -95,13 +166,13 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "Alt Catppuccin Macchiato",
+    "workbench.colorTheme": "Visual Studio Dark - C++",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",
     "security.workspace.trust.untrustedFiles": "open",
     "window.titleBarStyle": "custom",
-    "window.title": " ",
+    "window.title": "VSC",
     // "window.title": "(ツ)_/¯ ${activeEditorShort}",
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
@@ -112,6 +183,6 @@
     "zenMode.hideActivityBar": false,
     "zenMode.hideStatusBar": false,
     "window.menuBarVisibility": "toggle",
-    "workbench.activityBar.location": "hidden",
-    "path-intellisense.absolutePathToWorkspace": false
+    "path-intellisense.absolutePathToWorkspace": false,
+    "workbench.activityBar.location": "hidden"
 }

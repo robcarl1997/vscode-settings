@@ -287,4 +287,9 @@
       "command": "-revealFileInOS",
       "when": "!editorFocus"
     },
+    {
+      "key": "space t",
+      "command": "markdown.extension.checkTaskList",
+      "when": "editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+    },
 ]
