@@ -87,20 +87,69 @@
         ]
       }
     },
+
+  "todo-tree.general.tags": ["TODAY", "TODO", "FIXME", "[ ]", "[x]"],
       "todo-tree.highlights.customHighlight": {
-        "- [ ]": {
-          "foreground": "#5d1900", // Orange für offene Aufgaben
-          "background": "#ff6a34", // Orange für offene Aufgaben
-          "icon": "circle",        // Symbol für offene Aufgaben
-          "iconColour": "#ff723e"
-        },
-        "- [x]": {
-          "foreground": "#808080", // Grau für erledigte Aufgaben
-          "icon": "check",         // Symbol für erledigte Aufgaben
-          "iconColour": "#4CAF50"  // Grün für das Symbol
-        }
+          "[ ]": {
+            "background": "#d617174d",
+            "iconColour": "#ff000080",
+            "icon": "square"
+          },
+          "[x]": {
+            "background": "#00ff002f",
+            "iconColour": "#00ff0080",
+            "icon": "square-fill"
+          },
+      "TODAY": {
+        "background": "#00ccff80",
+        "iconColour": "#00ccff",
+        "icon": "tag"
+      },
     },
-    "todo-tree.regex.regex": "((//|#|<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG)|- \\[ \\]|- \\[x\\])",
+    // "todo-tree.regex.regex": "((//|#|<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG)|- \\[ \\]|- \\[x\\])",
+//     {
+//   "todo-tree.general.showActivityBarBadge": true,
+//   "todo-tree.general.tags": ["NOTE", "TODO", "FIXME", "MARK", "[ ]", "[x]"],
+//   "todo-tree.highlights.defaultHighlight": {
+//     "type": "tag",
+//     "fontWeight": "bold",
+//     "foreground": "#000000",
+//     "opacity": 90
+//   },
+//   "todo-tree.highlights.customHighlight": {
+//     "NOTE": {
+//       "background": "#FFA500",
+//       "iconColour": "#FFA500",
+//       "icon": "file"
+//     },
+//     "TODO": {
+//       "background": "#FFD703",
+//       "iconColour": "#FFD703",
+//       "icon": "tasklist"
+//     },
+//     "FIXME": {
+//       "background": "#FF01FF",
+//       "iconColour": "#FF01FF",
+//       "icon": "bug"
+//     },
+//     "MARK": {
+//       "background": "#157EFB",
+//       "iconColour": "#157EFB",
+//       "icon": "tag"
+//     },
+//     "[ ]": {
+//       "background": "#ff000080",
+//       "iconColour": "#ff000080",
+//       "icon": "square"
+//     },
+//     "[x]": {
+//       "background": "#00ff0080",
+//       "iconColour": "#00ff0080",
+//       "icon": "square-fill"
+//     }
+//   },
+// }
+
     "markdown.styles": ["custom.css"],
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
@@ -134,7 +183,7 @@
 
     // close active pane
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
-
+    { "before": ["leader", "t"], "commands": ["markdown.extension.checkTaskList"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     // panes
     // NICE TO HAVE
     { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
@@ -166,7 +215,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "Visual Studio Dark - C++",
+    "workbench.colorTheme": "Tokyo Night Storm",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",
@@ -183,6 +232,5 @@
     "zenMode.hideActivityBar": false,
     "zenMode.hideStatusBar": false,
     "window.menuBarVisibility": "toggle",
-    "path-intellisense.absolutePathToWorkspace": false,
-    "workbench.activityBar.location": "hidden"
+    "path-intellisense.absolutePathToWorkspace": false
 }
