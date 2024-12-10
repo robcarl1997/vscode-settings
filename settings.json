@@ -88,20 +88,25 @@
       }
     },
 
-  "todo-tree.general.tags": ["TODAY", "TODO", "FIXME", "[ ]", "[x]"],
+  "todo-tree.general.tags": ["???", "TODAY", "TODO", "FIXME", "[ ]", "[x]"],
       "todo-tree.highlights.customHighlight": {
           "[ ]": {
-            "background": "#d617174d",
+            "background": "#d6171728",
             "iconColour": "#ff000080",
             "icon": "square"
           },
           "[x]": {
-            "background": "#00ff002f",
+            "background": "#00ff0021",
             "iconColour": "#00ff0080",
             "icon": "square-fill"
           },
       "TODAY": {
         "background": "#00ccff80",
+        "iconColour": "#00ccff",
+        "icon": "tag"
+      },
+      "???": {
+        "background": "#ff000080",
         "iconColour": "#00ccff",
         "icon": "tag"
       },
@@ -179,16 +184,28 @@
     { "before": ["leader", "r"], "commands": ["python.execInTerminal"] },
 
     // Run C++ / C
-    { "before": ["leader", "c"], "commands": ["C_Cpp_Runner.buildSingleFile","C_Cpp_Runner.debugCurrentSelection"] },
+    // { "before": ["leader", "c"], "commands": ["C_Cpp_Runner.buildSingleFile","C_Cpp_Runner.debugCurrentSelection"] },
+    { "before": ["leader", "c", "c"], "commands": ["C_Cpp_Runner.buildSingleFile"] },
+    { "before": ["leader", "c", "d"], "commands": ["C_Cpp_Runner.debugCurrentSelection"] },
+    { "before": ["leader", "c", "r"], "commands": ["C_Cpp_Runner.BuildAndRunFile"] },
 
     // close active pane
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "t"], "commands": ["markdown.extension.checkTaskList"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
+    { "before": ["leader", "b"], "commands": ["editor.debug.action.toggleBreakpoint"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     // panes
     // NICE TO HAVE
     { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
 ],
 "vim.insertModeKeyBindings": [
+    {
+        "before": ["E", "E"],
+        "after": ["[", "]", "<left>"]
+    },
+    {
+        "before": ["B", "B"],
+        "after": ["{", "}", "<left>"]
+    },
     {
         "before": ["j", "k"],
         "after": ["<esc>"]
@@ -215,7 +232,7 @@
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Monokai",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",

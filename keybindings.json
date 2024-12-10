@@ -97,6 +97,12 @@
     "command": "editor.action.clipboardCopyAction", 
     "when": "editorTextFocus && vim.mode == 'Visual'",
   },
+  {
+    "key": "ctrl+shift+enter",  // or another keybinding of your choice
+    "command": "markdown.extension.editing.toggleList", 
+    "when": "editorTextFocus && (vim.mode == 'Normal' |/*  */| vim.mode == 'VisualLine')"
+  },
+
   //! Menu bar
   // {
   //     "key": "j",
@@ -286,5 +292,17 @@
       "key": "ctrl+alt+r",
       "command": "-revealFileInOS",
       "when": "!editorFocus"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "-workbench.action.reopenClosedEditor"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.view.extension.todo-tree-container"
+    },
+    {
+      "key": "ctrl+shift+[Semicolon]",
+      "command": "workbench.action.createTerminalEditor"
     },
 ]
