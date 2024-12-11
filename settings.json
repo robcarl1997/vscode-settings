@@ -176,6 +176,10 @@
     { "before": ["c", "i", "c"], "after": ["c", "i", "B"] },
     { "before": ["v", "i", "c"], "after": ["v", "i", "B"] },
 
+
+    { "before": ["<"], "after": ["<", "<"] },
+    { "before": [">"], "after": [">", ">"] },
+
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
