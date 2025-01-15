@@ -159,6 +159,7 @@
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "vim.leader": "<Space>",
+    "vim.foldfix": true,
     // NAVIGATION
     // switch b/w buffers
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -235,10 +236,10 @@
     },
     ],
     "workbench.iconTheme": "material-icon-theme",
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 2000,
+    // "files.autoSave": "afterDelay",
+    // "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
-    "workbench.colorTheme": "Alt Catppuccin Mocha",
+    "workbench.colorTheme": "Monokai",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
     "notebook.lineNumbers": "on",
