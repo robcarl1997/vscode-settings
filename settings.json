@@ -218,6 +218,18 @@
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "t"], "commands": ["markdown.extension.checkTaskList"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "b"], "commands": ["editor.debug.action.toggleBreakpoint"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
+    { "before": ["leader", "n"], 
+      "commands": [
+      { "command": "vim.remap", "args": { "after": ["g", "g", "O"] } },
+      { "command": "vim.remap", "args": { "after": ["[", "<C-r>", "#"] } },
+      { "command": "vim.remap", "args": { "after": ["<BS>", "<BS>", "<BS>"] } },
+      { "command": "vim.remap", "args": { "after": ["]", "("] } },
+      { "command": "vim.remap", "args": { "after": ["<C-r>", "#"] } },
+      { "command": "vim.remap", "args": { "after": [")"] } },
+      { "command": "vim.remap", "args": { "after": ["<CR>"] } },
+      { "command": "vim.remap", "args": { "after": ["<esc>"] } },
+    ]
+      },
     // panes
     // NICE TO HAVE
     { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
