@@ -5,31 +5,35 @@
       {
         "scope": "heading.1.markdown entity.name.section.markdown",
         "settings": {
-          "foreground": "#f82121"
+          "foreground": "#f82121",
+					"fontStyle": "bold",
         }
       },
       {
         "scope": "heading.2.markdown entity.name.section.markdown",
         "settings": {
-          "foreground": "#3eee38" // Grün für H2
+          "foreground": "#e4c200", // Grün für H2
+					"fontStyle": "bold",
         }
       },
       {
         "scope": "heading.3.markdown entity.name.section.markdown",
         "settings": {
-          "foreground": "#1abaff" 
+          "foreground": "#0084bd",
+					"fontStyle": "bold"
         }
       },
       {
         "scope": "heading.4.markdown entity.name.section.markdown",
         "settings": {
-          "foreground": "#a99e00" // Blau für H3
+          "foreground": "#60a900" // Blau für H3
         }
       },
       {
         "scope": "punctuation.definition.bold.markdown", 
         "settings": {
-          "foreground": "#383838" // Farbe für Sternchen
+          "foreground": "#383838", // Farbe für Sternchen
+
         }
       },
       {
@@ -88,7 +92,15 @@
       }
     },
 
-  "todo-tree.general.tags": ["???", "TODAY", "TODO", "FIXME", "[ ]", "[x]"],
+  "todo-tree.general.tags": [
+    "???",
+    "TODAY",
+    "TODO",
+    "FIXME",
+    "[ ]",
+    "[x]",
+    "F"
+  ],
       "todo-tree.highlights.customHighlight": {
           "[ ]": {
             "background": "#d6171728",
@@ -155,11 +167,15 @@
 //   },
 // }
 
-    "markdown.styles": ["custom.css"],
+    "markdown.styles": ["md_style.css"],
     "editor.lineNumbers": "relative",
     "editor.minimap.enabled": false,
     "vim.leader": "<Space>",
-    "vim.foldfix": true,
+    // "vim.foldfix": true,
+    // "vim.highlightedyank.color": "rgba(106, 13, 173, 0.3)",
+    "vim.highlightedyank.enable": true,
+    "vim.easymotion": true,
+    "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgjf",
     // NAVIGATION
     // switch b/w buffers
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -176,6 +192,10 @@
     { "before": ["d", "i", "c"], "after": ["d", "i", "B"] },
     { "before": ["c", "i", "c"], "after": ["c", "i", "B"] },
     { "before": ["v", "i", "c"], "after": ["v", "i", "B"] },
+    
+    // Markdown headings
+    { "before": ["<CR>"], "after": ["/", "^", "#", "<CR>", "z", "t"] },
+    { "before": ["<BS>"], "after": ["?", "^", "#", "<CR>", "z", "t"] },
 
 
     { "before": ["<"], "after": ["<", "<"] },
@@ -235,14 +255,16 @@
       ]
     },
     ],
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    // "latex-workshop.synctex.synctexjs.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab",
     "workbench.iconTheme": "material-icon-theme",
-    // "files.autoSave": "afterDelay",
-    // "files.autoSaveDelay": 2000,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 2000,
     "zenMode.hideLineNumbers": false,
     "workbench.colorTheme": "Monokai",
     "diffEditor.hideUnchangedRegions.enabled": true,
     "python.createEnvironment.trigger": "off",
-    "notebook.lineNumbers": "on",
     "security.workspace.trust.untrustedFiles": "open",
     "window.titleBarStyle": "custom",
     "window.title": "VSC",
@@ -260,5 +282,21 @@
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
     "breadcrumbs.enabled": false,
-    "workbench.activityBar.location": "hidden"
+    "workbench.colorCustomizations": {
+      "statusBar.background": "#005f5f",
+      "statusBar.noFolderBackground": "#005f5f",
+      "statusBar.debuggingBackground": "#005f5f",
+      "statusBar.foreground": "#ffffff",
+      "statusBar.debuggingForeground": "#ffffff"
+    },
+    "pasteImage.basePath": "${projectRoot}",
+    "pasteImage.path": "${projectRoot}/img",
+    "markdown-preview-enhanced.previewTheme": "vue.css",
+    "markdown-preview-enhanced.revealjsTheme": "serif.css",
+    "workbench.editor.autoLockGroups": {
+      "mainThreadWebview-markdown.preview": true,
+      "workbench.input.interactive": true,
+      "markdown-preview-enhanced": true
+    },
+    "markdown-preview-enhanced.enablePreviewZenMode": false
 }
