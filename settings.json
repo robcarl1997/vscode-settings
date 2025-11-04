@@ -181,6 +181,8 @@
     "vim.normalModeKeyBindingsNonRecursive": [
     { "before": ["<S-h>"], "commands": [":bprevious"] },
     { "before": ["<S-l>"], "commands": [":bnext"] },
+    { "before": ["<down>"], "after": ["n", "z", "z"] },
+    { "before": ["<up>"], "after": ["N", "z", "z"] },
 
     // []
     { "before": ["y", "i", "e"], "after": ["y", "i", "["] },
