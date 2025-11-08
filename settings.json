@@ -261,6 +261,7 @@
     { "before": [">"], "commands": ["editor.action.indentLines"] },
 
     { "before": ["leader"], "after": ["<esc>"] },
+    { "before": ["$"], "after": ["$", "h"] },
     // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.movelinesdownaction"] },
     { "before": ["L"], "after": ["d", "a", "[", "<esc>", "p", "a", "]", "(", "<esc>", "p", "l", "l", "x"] },
