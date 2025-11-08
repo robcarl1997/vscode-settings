@@ -99,7 +99,6 @@
     "FIXME",
     "[ ]",
     "[x]",
-    "F"
   ],
       "todo-tree.highlights.customHighlight": {
           "[ ]": {
@@ -207,6 +206,7 @@
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
 
+
     // Run python
     { "before": ["leader", "r"], "commands": ["python.execInTerminal"] },
 
@@ -217,6 +217,7 @@
     { "before": ["leader", "c", "r"], "commands": ["C_Cpp_Runner.BuildAndRunFile"] },
 
     // close active pane
+    { "before": ["leader", "Q"], "commands": ["workbench.action.closeOtherEditors"], "when": ["editorTextFocus && vim.mode == 'Normal'"] },
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "t"], "commands": ["markdown.extension.checkTaskList"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "b"], "commands": ["editor.debug.action.toggleBreakpoint"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
@@ -262,6 +263,9 @@
     { "before": ["leader"], "after": ["<esc>"] },
     // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.movelinesdownaction"] },
+    { "before": ["L"], "after": ["d", "a", "[", "<esc>", "p", "a", "]", "(", "<esc>", "p", "l", "l", "x"] },
+    // { "before": ["L"], "after": ["d", "i", "[", "<esc>", "p", "a", "]", "(", "<esc>", "p", "l", "l", "x", "i", ".", "m", "d"] },
+    // { "before": ["L"], "after": ["d", "i", "[", "<esc>", "p", "a", "]", "(", "<esc>", "p", "E", "x", "i", ".", "m", "d"] },
     { "before": ["K"], "commands": ["editor.action.movelinesupaction"] },
     {
     "before": ["S", "\""],
@@ -285,10 +289,11 @@
     "python.createEnvironment.trigger": "off",
     "security.workspace.trust.untrustedFiles": "open",
     "window.titleBarStyle": "custom",
-    "window.title": "VSC",
+    "window.title": "${activeRepositoryName}",
     // "window.title": "(ツ)_/¯ ${activeEditorShort}",
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
+    "markdown-preview-enhanced.openMarkdownLinksInNewEditor": false,
     "window.customTitleBarVisibility": "auto",
     "window.density.editorTabHeight": "compact",
     "editor.scrollbar.horizontal": "hidden",
@@ -316,5 +321,8 @@
       "workbench.input.interactive": true,
       "markdown-preview-enhanced": true
     },
-    "markdown-preview-enhanced.enablePreviewZenMode": false
+    "markdown-preview-enhanced.enablePreviewZenMode": true,
+    "ruff.format": true,
+    "ruff.lint.enable": true,
+    "workbench.activityBar.location": "hidden"
 }
