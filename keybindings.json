@@ -42,6 +42,40 @@
     "when": "terminalFocus"
   },
   //! FILE TREE
+    {
+      "key": "ctrl+d",
+      "command": "runCommands",
+      "args": {
+        "commands": [
+          "list.focusDown",
+          "list.focusDown",
+          "list.focusDown",
+        ]
+      },
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "ctrl+u",
+      "command": "runCommands",
+      "args": {
+        "commands": [
+          "list.focusUp",
+          "list.focusUp",
+          "list.focusUp",
+        ]
+      },
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "space o",
+      "command": "runCommands",
+      "args": {
+        "commands": [
+            "workbench.action.quickOpen"
+        ]
+      },
+      "when": "filesExplorerFocus && !inputFocus"
+    },
    {
     // c + p → Relativen Pfad kopieren
     "key": "c p",
@@ -64,7 +98,7 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "n",
+    "key": "a",
     "command": "explorer.newFile",
     "when": "filesExplorerFocus && !inputFocus"
   },
@@ -94,7 +128,7 @@
     "when": "filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "shift+n",
+    "key": "shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletFocus"
   },
@@ -258,7 +292,7 @@
       "command": "workbench.action.decreaseViewSize",
       "when": "editorTextFocus && vim.active"
     },
-    // Listen
+    //! Listen
     {
     "key": "ctrl+j",
     "command": "workbench.action.quickOpenNavigateNext",
@@ -269,7 +303,7 @@
     "command": "workbench.action.quickOpenNavigatePrevious",
     "when": "inQuickOpen"
     },
-    // Autocomplete
+    //! Autocomplete
     {
     "key": "ctrl+j",
     "command": "selectNextSuggestion",
@@ -280,7 +314,7 @@
     "command": "selectPrevSuggestion",
     "when": "suggestWidgetVisible && editorTextFocus"
     },
-    // close window 
+    //! close window 
     {
     "key": "space+q",
     "command": "workbench.action.closeActiveEditor",
