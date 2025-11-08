@@ -42,6 +42,18 @@
     "when": "terminalFocus"
   },
   //! FILE TREE
+   {
+    // c + p → Relativen Pfad kopieren
+    "key": "c p",
+    "command": "copyRelativeFilePath",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
+  {
+    // c + P → Absoluten Pfad kopieren (Shift + P)
+    "key": "c shift+p",
+    "command": "copyFilePath",
+    "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+  },
   {
     "command": "workbench.action.toggleSidebarVisibility",
     "key": "ctrl+e"
