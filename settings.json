@@ -324,5 +324,6 @@
     "markdown-preview-enhanced.enablePreviewZenMode": true,
     "ruff.format": true,
     "ruff.lint.enable": true,
-    "workbench.activityBar.location": "hidden"
+    "workbench.activityBar.location": "hidden",
+
 }
