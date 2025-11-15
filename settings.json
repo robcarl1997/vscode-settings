@@ -182,6 +182,10 @@
     { "before": ["<S-l>"], "commands": [":bnext"] },
     { "before": ["<down>"], "after": ["n", "z", "z"] },
     { "before": ["<up>"], "after": ["N", "z", "z"] },
+    { "before": ["U"], "after": ["u"] },
+    { "before": ["u"], "after": [""] },
+    { "before": ["<C-d>"], "after": ["<C-d>", "z", "z"] },
+    { "before": ["<C-u>"], "after": ["<C-u>", "z", "z"] },
 
     // []
     { "before": ["y", "i", "e"], "after": ["y", "i", "["] },
