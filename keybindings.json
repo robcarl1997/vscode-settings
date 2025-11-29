@@ -41,6 +41,7 @@
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
   },
+
   //! FILE TREE
     {
       "key": "ctrl+d",
@@ -97,6 +98,12 @@
     "key": "ctrl+e",
     "when": "editorTextFocus"
   },
+  //! Sidebar
+  {
+    "key": "ctrl+shift+b",
+    "command": "workbench.action.toggleAuxiliaryBar",
+  },
+  //! --------------
   {
     "key": "a",
     "command": "explorer.newFile",
