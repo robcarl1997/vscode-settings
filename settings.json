@@ -225,7 +225,7 @@
     { "before": ["leader", "q"], "commands": ["workbench.action.closeActiveEditor"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "t"], "commands": ["markdown.extension.checkTaskList"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
     { "before": ["leader", "b"], "commands": ["editor.debug.action.toggleBreakpoint"], "when": ["editorTextFocus && vim.mode == 'Normal'"]},
-    { "before": ["leader", "l"], 
+    { "before": ["leader", "L"], 
       "commands": [
       { "command": "vim.remap", "args": { "after": ["g", "g", "O"] } },
       { "command": "vim.remap", "args": { "after": ["[", "<C-r>", "#"] } },
@@ -237,6 +237,8 @@
       { "command": "vim.remap", "args": { "after": ["<esc>"] } },
     ]
       },
+    { "before": ["leader", "l"], "after": ["$"]},
+    { "before": ["leader", "h"], "after": ["_"]},
     // panes
     // NICE TO HAVE
     { "before": ["leader", "o"], "commands": ["workbench.action.quickOpen"]}
@@ -309,7 +311,6 @@
     "path-intellisense.absolutePathToWorkspace": false,
     "git.enableSmartCommit": true,
     "git.confirmSync": false,
-    "breadcrumbs.enabled": false,
     "workbench.colorCustomizations": {
       "statusBar.background": "#005f5f",
       "statusBar.noFolderBackground": "#005f5f",
@@ -329,6 +330,11 @@
     "markdown-preview-enhanced.enablePreviewZenMode": true,
     "ruff.format": true,
     "ruff.lint.enable": true,
-    "workbench.activityBar.location": "hidden",
+    "[jsonc]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "geminicodeassist.project": "tuned-vortex-bshbt",
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
 
 }
