@@ -94,9 +94,16 @@
 
   "todo-tree.general.tags": [
     "???",
-    "TODAY",
+    "LOW",
+    "MEDIUM",
+    "HIGH",
     "TODO",
     "FIXME",
+    "ABGABE",
+    "FORMAT",
+    "SUM",
+    "EXTEND",
+    "FORMULATE",
     "[ ]",
     "[x]",
   ],
@@ -116,13 +123,54 @@
         "iconColour": "#00ccff",
         "icon": "tag"
       },
-      "???": {
-        "background": "#ff000080",
+      "LOW": {
+        "background": "#00ccff80",
         "iconColour": "#00ccff",
         "icon": "tag"
       },
+      "MEDIUM": {
+        "background": "#fbff0085",
+        "iconColour": "#fbff00",
+        "icon": "tag"
+      },
+      "HIGH": {
+        "background": "#ff000099",
+        "iconColour": "#ff0000",
+        "icon": "tag"
+      },
+      "ABGABE": {
+        "background": "#ff006a8f",
+        "iconColour": "#ff00bf8f",
+        "icon": "tag"
+      },
+      "FORMAT": {
+        "background": "#6f00ff8a",
+        "iconColour": "#8400ff8f",
+        "icon": "tag"
+      },
+      "SUM": {
+        "background": "#5a76f58a",
+        "iconColour": "#5a76f58a",
+        "icon": "tag"
+      },
+      "EXTEND": {
+        "background": "#00ff0d8a",
+        "iconColour": "#09ff008f",
+        "icon": "tag"
+      },
+      "FORMULATE": {
+        "background": "#1100ff3b",
+        "iconColour": "#0044ff8f",
+        "icon": "tag"
+      },
+      "???": {
+        "background": "#ff000080",
+        "iconColour": "#ff000d86",
+        "icon": "tag"
+      },
     },
-    // "todo-tree.regex.regex": "((//|#|<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG)|- \\[ \\]|- \\[x\\])",
+    // "todo-tree.regex.regex": "((//|#|%|% |<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG|HIGH|MEDIUM|LOW)|- \\[ \\]|- \\[x\\])",
+    // "todo-tree.regex.regex": "((//|#|%|% |<!--|;|\\*)\\s*(TODO|FIXME|NOTE|BUG|HIGH|MEDIUM|LOW)|- \\[ \\]|- \\[x\\])",
 //     {
 //   "todo-tree.general.showActivityBarBadge": true,
 //   "todo-tree.general.tags": ["NOTE", "TODO", "FIXME", "MARK", "[ ]", "[x]"],
@@ -209,6 +257,9 @@
     // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
+    
+    //latex
+    { "before": ["leader", "g"], "commands": ["latex-workshop.synctex"] },
 
 
     // Run python
@@ -259,7 +310,11 @@
     {
         "before": ["j", "k"],
         "after": ["<esc>"]
-    }
+    },
+    {
+        "before": ["'", "'"],
+        "after": ["%", "#", " "]
+    },
 ],
 "vim.visualModeKeyBindings":[
     // Stay in visual mode while indenting
@@ -296,7 +351,7 @@
     "python.createEnvironment.trigger": "off",
     "security.workspace.trust.untrustedFiles": "open",
     "window.titleBarStyle": "custom",
-    "window.title": "${activeRepositoryName}",
+    "window.title": "${rootNameShort}",
     // "window.title": "(ツ)_/¯ ${activeEditorShort}",
     "workbench.layoutControl.enabled": false,
     "window.commandCenter": false,
@@ -322,6 +377,7 @@
     "pasteImage.path": "${projectRoot}/img",
     "markdown-preview-enhanced.previewTheme": "vue.css",
     "markdown-preview-enhanced.revealjsTheme": "serif.css",
+    "todo-tree.general.includeGlobs": ["**/*.tex"],
     "workbench.editor.autoLockGroups": {
       "mainThreadWebview-markdown.preview": true,
       "workbench.input.interactive": true,
@@ -336,5 +392,11 @@
     "geminicodeassist.project": "tuned-vortex-bshbt",
     "gitlens.ai.model": "vscode",
     "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "http.systemCertificatesNode": true,
+    "claudeCode.preferredLocation": "panel",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "workbench.activityBar.location": "hidden",
+    "git.blame.statusBarItem.enabled": false,
+    "claudeCode.selectedModel": "sonnet",
 
 }
