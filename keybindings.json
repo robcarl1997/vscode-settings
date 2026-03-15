@@ -12,6 +12,11 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+space c",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
     "key": "ctrl+space v",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
