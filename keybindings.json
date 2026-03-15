@@ -2,13 +2,33 @@
 [  
     //! Terminal
   {
-    "key": "ctrl+shift+j",
+    "key": "ctrl+space n",
     "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+shift+k",
+    "key": "ctrl+space p",
     "command": "workbench.action.terminal.focusPrevious",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+space v",
+    "command": "workbench.action.terminal.split",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+space k",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+space x",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+space j",
+    "command": "workbench.action.terminal.focusNextPane",
     "when": "terminalFocus"
   },
   {
@@ -357,5 +377,13 @@
     {
       "key": "ctrl+shift+[Semicolon]",
       "command": "workbench.action.createTerminalEditor"
+    },
+    {
+        "key": "shift+enter",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b\r"
+        },
+        "when": "terminalFocus"
     },
 ]
