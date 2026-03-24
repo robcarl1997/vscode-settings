@@ -7,6 +7,10 @@
     "when": "terminalFocus"
   },
   {
+  "key": "ctrl+shift+a",                                
+  "command": "workbench.action.terminal.newWithProfile" 
+  },
+  {
     "key": "ctrl+space p",
     "command": "workbench.action.terminal.focusPrevious",
     "when": "terminalFocus"
@@ -391,4 +395,14 @@
         },
         "when": "terminalFocus"
     },
+    {
+      "key": "ctrl+space [Comma]",
+      "command": "workbench.action.terminal.renameActiveTab",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "f2",
+      "command": "-workbench.action.terminal.renameActiveTab",
+      "when": "terminalHasBeenCreated && terminalTabsFocus && terminalTabsSingularSelection || terminalProcessSupported && terminalTabsFocus && terminalTabsSingularSelection"
+    }
 ]
