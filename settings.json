@@ -395,8 +395,27 @@
     "http.systemCertificatesNode": true,
     "claudeCode.preferredLocation": "panel",
     "diffEditor.ignoreTrimWhitespace": false,
-    "workbench.activityBar.location": "hidden",
     "git.blame.statusBarItem.enabled": false,
     "claudeCode.selectedModel": "sonnet",
+      "terminal.integrated.profiles.linux": {                                                            
+      "Claude": {                                           
+          "path": "bash",
+          "args": ["-c", "claude --dangerously-skip-permissions"],
+          "icon": "hubot",                                                                           
+          "color": "terminal.ansiYellow"
+      },                                                                                             
+      "Codex": {                                            
+          "path": "bash",                                                                            
+          "args": ["-c", "codex --dangerously-bypass-approvals-and-sandbox"],
+          "icon": "hubot",                                                                           
+          "color": "terminal.ansiGreen"                     
+      },
+      "Gemini": {
+          "path": "bash",
+          "args": ["-c", "gemini -y"],                                                                  
+          "icon": "hubot",
+          "color": "terminal.ansiBlue"                                                               
+      }                                                     
+  }
 
 }
